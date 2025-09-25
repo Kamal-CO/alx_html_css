@@ -1,1 +1,45 @@
+/* Reset default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* Body container - column layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+/* Main container - row layout */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: auto; /* Takes automatic height and width */
+}
+
+/* Article takes 2/3 of the width */
+article {
+    flex: 2;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    padding: 20px; /* Add some padding for better appearance */
+}
+
+/* Aside takes 1/3 of the width */
+aside {
+    flex: 1;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    padding: 20px; /* Add some padding for better appearance */
+}
+
+/* Header and footer styling for better visibility */
+header {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+footer {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
