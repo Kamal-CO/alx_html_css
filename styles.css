@@ -56,7 +56,7 @@ header {
 header ul {
     display: flex;
     align-items: center;
-    gap: 30px;
+
 }
 
 header li a {
@@ -65,6 +65,7 @@ header li a {
     font-weight: bold;
     padding: 10px 15px;
     border-radius: 25px;
+    margin-right: 20px;
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
@@ -79,13 +80,11 @@ header li a:hover {
 /* Logo styling */
 header li.logo {
     font-size: 36px;
-    margin-right: auto;
+    margin-right: 10px;
 }
 
 header li.logo a {
     background: linear-gradient(45deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: 42px;
     padding: 0;
     border: none;
@@ -94,7 +93,6 @@ header li.logo a {
 header li.logo a:hover {
     transform: scale(1.1);
     background: linear-gradient(45deg, #764ba2, #667eea);
-    -webkit-background-clip: text;
 }
 
 /* Footer styling */
@@ -124,7 +122,6 @@ footer a:hover {
 article h1 {
     font-size: 3em;
     background: linear-gradient(45deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 30px;
     text-align: center;
