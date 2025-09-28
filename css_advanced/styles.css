@@ -132,3 +132,480 @@
     font-size: 14px;
     color: #d8c1c1;
   }
+/* Quotes Section Styling */
+section:nth-of-type(2) {
+  background-color: #C271FF;
+  padding: 100px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+section:nth-of-type(2) > div:first-child {
+  flex: 0 0 auto;
+}
+
+section:nth-of-type(2) > div:first-child img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+section:nth-of-type(2) > div:last-child {
+  flex: 0 0 40%;
+  color: white;
+}
+
+section:nth-of-type(2) blockquote {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 34px;
+  margin-bottom: 40px;
+  position: relative;
+}
+section:nth-of-type(2) h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+section:nth-of-type(2) p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+/* Videos List Section Styling */
+
+.highlight-popular {
+  color: #C271FF;
+}
+
+.videos-section {
+  padding: 80px 0;
+  background-color: #ffffff;
+}
+
+.videos-section h2 {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #071629;
+  margin-bottom: 60px;
+}
+
+/* Horizontal container */
+.videos-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Individual video cards */
+.video-card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 280px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Video thumbnail */
+.video-card > img:first-child {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Video title and description */
+.video-card h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #071629;
+  margin: 20px 20px 10px;
+}
+
+.video-card > p:first-of-type {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: #071629;
+  opacity: 0.7;
+  line-height: 1.5;
+  margin: 0 20px 15px;
+}
+
+/* Author section */
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 20px 15px;
+}
+
+.author-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-info h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #C271FF;
+  margin: 0;
+}
+
+/* Rating stars */
+.rating {
+  display: flex;
+  gap: 5px;
+  margin: 0 20px 15px;
+}
+
+.rating i {
+  color: #C271FF;
+  font-size: 12px;
+  
+}
+
+.different-star {
+  color: gray !important; /* Gold color */
+}
+
+/* Duration */
+.duration {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #C271FF;
+  margin: 0 20px 20px;
+  text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .videos-container {
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  
+  .video-card {
+      flex: 0 0 calc(50% - 30px);
+      max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .video-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+  
+  .videos-section h2 {
+      font-size: 28px;
+  }
+}
+
+/* Membership Section Styling */
+.membership-section {
+  padding: 80px 0;
+  background: linear-gradient(45deg, #071629, #1a2d4a);
+  text-align: center;
+}
+
+.membership-section h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 60px;
+  text-transform: capitalize;
+}
+
+.highlight-popular {
+  color: #C271FF;
+}
+
+/* Horizontal container for membership cards */
+.membership-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1000px;
+  margin: 0 auto 50px;
+  flex-wrap: wrap;
+}
+
+/* Individual membership cards */
+.membership-card {
+  flex: 0 0 180px;
+  text-align: center;
+}
+
+/* Smile icon */
+.membership-card img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1); /* Make icons white */
+}
+
+/* Card title */
+.membership-card h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+/* Card description */
+.membership-card p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+  opacity: 0.7;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Register button */
+.membership-section button {
+  background: #C271FF;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.membership-section button:hover {
+  background: #A55AE0;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(194, 113, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .membership-container {
+      gap: 40px;
+  }
+  
+  .membership-card {
+      flex: 0 0 150px;
+  }
+  
+  .membership-section h2 {
+      font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .membership-container {
+      gap: 30px;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .membership-card {
+      flex: 0 0 auto;
+      width: 200px;
+  }
+}
+/* FAQ Section Styling */
+section:nth-of-type(5) {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* FAQ Heading */
+section:nth-of-type(5) > h2 {
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  color: #071629;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+/* FAQ Grid Container */
+section:nth-of-type(5) > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* FAQ Item Rows */
+section:nth-of-type(5) > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Individual FAQ Items */
+section:nth-of-type(5) > div > div > div {
+  margin-bottom: 20px;
+}
+
+/* FAQ Questions */
+section:nth-of-type(5) h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #071629;
+  margin-bottom: 15px;
+}
+
+/* FAQ Answers */
+section:nth-of-type(5) > div > div > div > div:last-child {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  color: #071629;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  section:nth-of-type(5) > div {
+      grid-template-columns: 1fr;
+      gap: 30px;
+  }
+  
+  section:nth-of-type(5) > h2 {
+      font-size: 28px;
+      margin-bottom: 40px;
+  }
+  
+  section:nth-of-type(5) {
+      padding: 60px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  section:nth-of-type(5) > div > div {
+      gap: 20px;
+  }
+  
+  section:nth-of-type(5) > h2 {
+      font-size: 24px;
+  }
+}
+
+/* Footer Styling */
+footer {
+  background-color: #071629;
+  padding: 60px 20px 30px;
+  color: #ffffff;
+}
+
+footer section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Top row with logo and social media */
+footer section > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+/* Logo */
+footer section > div:first-child img {
+  width: 120px;
+  height: auto;
+  filter: brightness(0) invert(1); /* Make logo white */
+}
+
+/* Social media icons - aligned to right */
+footer section > div:first-child > div {
+  display: flex;
+  gap: 20px;
+}
+
+footer section > div:first-child > div i {
+  font-size: 20px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+footer section > div:first-child > div i:hover {
+  color: #C271FF;
+}
+
+/* Copyright text */
+footer section p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+  opacity: 0.6;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  footer {
+      padding: 40px 15px 20px;
+  }
+  
+  footer section > div:first-child {
+      flex-direction: column;
+      gap: 25px;
+      text-align: center;
+      margin-bottom: 30px;
+  }
+  
+  footer section > div:first-child img {
+      width: 100px;
+  }
+  
+  footer section p {
+      margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer section > div:first-child > div {
+      gap: 15px;
+  }
+  
+  footer section > div:first-child > div i {
+      font-size: 18px;
+  }
+  
+  footer {
+      padding: 30px 10px 15px;
+  }
+}
