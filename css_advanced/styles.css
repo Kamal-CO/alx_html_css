@@ -1,0 +1,134 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #fff;
+  }
+  /* Navigation */
+  header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  header nav img {
+    height: 40px;
+  }
+  header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+  }
+  header nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  /* Hero */
+  main > section:first-of-type {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('./images/Object.png') no-repeat center/cover;
+    color: white;
+    text-align: center;
+    padding: 120px 20px 80px;
+  }
+  main > section:first-of-type h1 {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  main > section:first-of-type span {
+    margin: 0 20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+    font-weight: bold;
+  }
+  main > section:first-of-type button {
+    margin: 30px auto 0;
+    padding: 14px 30px;
+    background: #a64bf4;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    box-shadow: #464141;
+  }
+  main > section:first-of-type button:hover {
+    background: #8338ec;
+  }
+  /* Learn from the pros */ 
+  h2 .highlight {
+    color: #a64bf4;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 32px;
+    margin: 40px 0 20px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+/* Container that holds all cards */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+  }
+  
+  /* Each card */
+  .container > div {
+    text-align: center;
+    padding: 20px;
+    max-width: 220px;
+    transition: transform 0.3s ease;
+  }
+  
+  .container > div:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Image styling */
+  .container img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  /* Headings */
+  .container h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: white;
+  }
+  
+  /* Paragraph text */
+  .container p {
+    font-size: 14px;
+    color: #d8c1c1;
+  }
