@@ -1,0 +1,473 @@
+/* === CSS RESET === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fallback for browsers that don't support smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* === CSS VARIABLES === */
+:root {
+    /* Fonts */
+    --font-primary: 'Source Sans Pro', sans-serif;
+    --font-accent: 'Spin Cycle OT', sans-serif;
+    
+    /* Colors */
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.9);
+    --accent-color: #ff0000;
+    --nav-hover: #ff0000;
+    --mobile-bg: none;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+    --space-xl: 4rem;
+
+    /* New variables for What We Do section */
+    --section-bg: #ffffff;
+    --section-text: #000000;
+    --icon-color: #ff0000;
+    --icon-hover: #cc0000;
+    --grid-gap: var(--space-lg);
+}
+
+/* === BASE STYLES === */
+body {
+    font-family: var(--font-primary);
+    /* line-height: 1.6; */
+    color: var(--text-primary);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+/* === MAIN HEADER === */
+.main-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: var(--space-sm) 0;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo Styles */
+.logo-img {
+    height: 35px;
+    width: auto;
+}
+
+/* Navigation Styles - Desktop */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: var(--space-lg);
+}
+
+.nav-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--nav-hover);
+    opacity: 0.9
+}
+
+
+.nav-link:hover::after {
+    width: 80%;
+}
+
+/* Hamburger Menu - Hidden on Desktop */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: var(--space-xs);
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+/* === HERO SECTION === */
+.hero {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+        url('images/headphones_hero_1.jpg') center/cover no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Title Styles */
+.hero-title {
+    font-family: var(--font-accent);
+    font-size: bold 32px;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--space-sm);
+}
+
+.hero-subtitle {
+    font-family: var(--font-primary);
+    font-size: bold 16px;
+    color: var(--text-secondary);
+    margin-bottom: var(--space-lg);
+    line-height: 1.4;
+}
+
+/* CTA Section */
+.cta-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* CTA Button */
+.cta-button {
+    font-family: var(--font-accent);
+    font-size: bold 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    background: #ff0000;
+    border: 2px transparent ;
+    border-radius: 15px 15px 15px 15px;
+    padding: var(--space-sm) var(--space-lg);
+    margin-bottom: var(--space-lg);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+}
+
+
+.cta-text {
+    font-family: var(--font-primary);
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .separator {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .cta-button {
+        padding: var(--space-xs) var(--space-md);
+        margin-bottom: var(--space-md);
+    }
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablet Styles (768px and below) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--space-sm);
+    }
+    
+    .logo-img {
+        height: 30px;
+    }
+    
+    .nav-list {
+        gap: var(--space-md);
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+        padding: var(--space-xs);
+    }
+    
+    .hero {
+        padding-top: 70px;
+        text-align: center;
+    }
+    
+    .hero-content {
+        margin-top: var(--space-md);
+    }
+}
+
+/* Mobile Styles (600px and below) */
+@media (max-width: 600px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .main-nav {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        background-color: var(--mobile-bg);
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0);
+        /* border-top: 1px solid rgba(255, 255, 255, 0); */
+    }
+    
+    .main-nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: var(--space-lg);
+        text-align: center;
+        padding: var(--space-lg) 0;
+        width: 100%;
+    }
+    
+    .nav-link {
+        font-size: 1.2rem;
+        padding: var(--space-sm) var(--space-lg);
+        display: block;
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-link:hover {
+        background-color: rgba(255, 0, 0, 0.1);
+        color: var(--nav-hover);
+    }
+    
+    .nav-link::after {
+        bottom: -10px;
+    }
+    
+    /* Hamburger Animation */
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    /* Adjust hero section to account for dropdown */
+    .hero {
+        padding-top: 70px;
+    }
+}
+
+/* Small Mobile Styles (400px and below) */
+@media (max-width: 400px) {
+    .nav-link {
+        font-size: 1.1rem;
+        padding: var(--space-sm) var(--space-md);
+    }
+    
+    .nav-list {
+        gap: var(--space-md);
+        padding: var(--space-md) 0;
+    }
+}
+/* === WHAT WE DO SECTION === */
+.what-we-do {
+    padding: var(--space-xl) 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.section-title {
+    font-family: var(--font-accent);
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: var(--space-xl);
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.section-description {
+    font-family: var(--font-primary);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.7;
+    text-align: center;
+    color: #666666;
+    max-width: 800px;
+    margin: 0 auto var(--space-xl) auto;
+    padding: 0 var(--space-sm);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+    gap: var(--space-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-item {
+    text-align: center;
+    padding: var(--space-lg);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 4rem;
+    color: #ff0000;
+    margin-bottom: var(--space-md);
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+    color: #cc0000;
+}
+
+.service-title {
+    font-family: var(--font-accent);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.service-description {
+    font-family: var(--font-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666666;
+}
+
+/* === HOLBERTON ICONS FONT === */
+@font-face {
+    font-family: 'holberton_school-icon';
+    src: url('fonts/holberton_school-icon.eot?kqevag');
+    src: url('fonts/holberton_school-icon.eot?kqevag#iefix') format('embedded-opentype'),
+        url('fonts/holberton_school-icon.ttf?kqevag') format('truetype'),
+        url('fonts/holberton_school-icon.woff?kqevag') format('woff'),
+        url('fonts/holberton_school-icon.svg?kqevag#holberton_school-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+.holberton_school-icon-ic_sound:before {
+    content: "\e90e";
+}
+
+.holberton_school-icon-ic_video:before {
+    content: "\e910";
+}
+
+.holberton_school-icon-ic_music:before {
+    content: "\e90d";
+}
+
+.holberton_school-icon-ic_hearing:before {
+    content: "\e909";
+}
+
+[class^="holberton_school-icon-"],
+[class*=" holberton_school-icon-"] {
+    font-family: 'holberton_school-icon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    .what-we-do {
+        padding: var(--space-lg) 0;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: var(--space-md);
+    }
+    
+    .service-item {
+        padding: var(--space-md);
+    }
+    
+    .service-icon {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+    
+    .service-item {
+        padding: var(--space-sm);
+    }
+}
